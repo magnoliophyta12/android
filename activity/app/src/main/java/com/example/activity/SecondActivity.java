@@ -14,7 +14,6 @@ public class SecondActivity extends AppCompatActivity {
 
         Button button = findViewById(R.id.button);
 
-        // Отримуємо передане число
         int number = getIntent().getIntExtra("number", 1);
         button.setText(String.valueOf(number));
 
@@ -24,7 +23,7 @@ public class SecondActivity extends AppCompatActivity {
                 Intent intent = new Intent(SecondActivity.this, MainActivity.class);
                 intent.putExtra("number", number + 1);
                 startActivity(intent);
-                finish(); // Закриваємо поточну активність
+                finish();
             }
         });
     }
